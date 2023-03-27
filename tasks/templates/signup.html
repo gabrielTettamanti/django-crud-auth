@@ -1,9 +1,14 @@
-<h1>Signup</h1>
-<span warning>{{ error }}</span>
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_div}}
-    <button>
-        Signup
-    </button>
-</form>
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Signup</h1>
+    <span warning>{{ error }}</span>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_div}}
+        <button>
+            Signup
+        </button>
+    </form>
+{% endblock %}
